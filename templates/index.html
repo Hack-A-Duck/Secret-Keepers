@@ -1,0 +1,85 @@
+{% extends 'base.html' %} {% block homeactive %}active{% endblock homeactive %}
+{% block body %}
+<div class="container-fluid mx-0 px-0">
+  <div
+    id="carouselExampleFade"
+    class="carousel slide carousel-fade"
+    data-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="5000">
+        <img
+          src="https://source.unsplash.com/1600x500/daily?coders,tesla"
+          class="d-block w-100"
+          alt="one"
+        />
+      </div>
+      <div class="carousel-item" data-interval="5000">
+        <img
+          src="https://source.unsplash.com/1600x500/daily?code,windows"
+          class="d-block w-100"
+          alt="two"
+        />
+      </div>
+      <div class="carousel-item" data-interval="5000">
+        <img
+          src="https://source.unsplash.com/1600x500/daily?hacker,apple"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleFade"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleFade"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div class="container my-4">
+ <h2 class="text-center my-4">  Why choose us? </h2>
+    <div class="row">
+        <div class="col-md-4 ">
+        <div class="text-center">
+  <img src="https://source.unsplash.com/170x170/daily?coders,html" class="rounded" alt="loading..."> 
+ <div class="my-4">
+  <h5>Best Coding Articles</h5>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin augue magna, a vestibulum nibh imperdiet vitae. Suspendisse consectetur sed ante a varius.
+  </div></div>
+</div>
+       
+        <div class="col-md-4 ">  
+    <div class="text-center">
+  <img src="https://source.unsplash.com/170x170/daily?pen,books" class="rounded" alt="loading...">
+  <div class="my-4">
+  <h5>Free Courses</h5>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin augue magna, a vestibulum nibh imperdiet vitae. Suspendisse consectetur sed ante a varius.
+  </div>
+</div>
+        </div>
+        <div class="col-md-4 "> <div class="text-center">
+  <img src="https://source.unsplash.com/170x170/daily?help,apple" class="rounded" alt="loading...">
+  <div class="my-4">
+  <h5>Services</h5>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin augue magna, a vestibulum nibh imperdiet vitae. Suspendisse consectetur sed ante a varius.
+  </div>
+</div>
+        </div>    
+    </div>
+
+</div>
+{% endblock body %}

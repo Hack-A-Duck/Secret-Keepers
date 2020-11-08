@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block homeactive %}active{% endblock homeactive %}
+{% block css %}
+<style>
+  .container {
+    min-height: 28vh;
+  }
+</style>
+
+{% endblock css %} 
+
+{% block body %}
+<div class="container my-3">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to the World Of Secrets!</h1>
+    <p class="lead">
+     Keeping secrets isn’t my specialty.
+    </p>
+    <hr class="my-4" />
+    <p>
+      A secret is no longer a secret once someone knows it.
+      But the aspect of secrets is they leak out. If they didn’t leak, they wouldn’t be interesting.
+    </p>
+    <a class="btn btn-outline-primary btn-lg" href="/blog" role="button"
+      >Go to Blog</a
+    >
+  </div>
+</div>
+<div class="container">
+  <h2 class="my-4">Recent Blogs</h2>
+  {% for blog in blogs %}
+  <div
+    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+  >
+    <div class="col p-4 d-flex flex-column position-static">
+    <strong class="d-inline-block mb-2 text-primary">{{blog.relation}}</strong>
+      <h3 class="mb-0"><a href="/blogpost/{{blog.slugs}}" class="text-dark">{{blog.title}}</a></h3>
+      <div class="mb-1 text-muted my-1">{{blog.time}}  by {{blog.author}}</div>
+      <p class="card-text mb-auto">
+        {{blog.Short_Description|safe}}...
+      </p>
+      <a href="/blogpost/{{blog.slugs}}">
+<button  type="button" class="btn btn-outline-primary btn-sm my-2">Continue Reading</button></a>
+    </div>
+  </div>
+
+  {% comment %} <div class="my-5">
+    <h3 class="text-dark my-2"><a href="/blogpost/{{blog.slugs}}" class="text-dark">{{blog.title}}</a></h3>
+   <div class="my-2">{{blog.content|slice:400|safe}}...</div>
+   <a href="/blogpost/{{blog.slugs}}">
+<button  type="button" class="btn btn-primary btn-sm">Read More...</button></a>
+</div> {% endcomment %}
+{% endfor %}
+</div>
+{% endblock body %}

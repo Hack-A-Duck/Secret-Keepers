@@ -1,0 +1,91 @@
+{% extends 'base.html' %} {% block blogactive %}active{% endblock blogactive %}
+{% block css %}
+<style>
+  .container {
+    min-height: 83vh;
+  }
+  .container img {
+    max-width:90%;
+    height:auto;
+}
+</style>
+
+{% endblock css %} {% block body %}
+
+<div class="container">
+  <div class="row">
+    <!-- Post Content Column -->
+    <div class="col-lg-8 my-3 mx-auto border">
+      <!-- Title -->
+      <h1 class="mt-4">{{blogs.title}}</h1>
+
+      <!-- Author -->
+      <p class="lead">
+        by
+        <span>{{blogs.author}}</span>
+      </p>
+
+      <hr />
+
+      <!-- Date/Time -->
+      <p>Posted on {{blogs.time}}</p>
+
+      <hr />
+      <div class="">{{blogs.content|safe}}</div>
+
+      <!-- Comments Form -->
+
+    </div>
+      <!-- Sidebar Widgets Column -->
+      
+        {% comment %} <div class="card my-4">
+          <h5 class="card-header">Categories</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Web Design</a>
+                  </li>
+                  <li>
+                    <a href="#">HTML</a>
+                  </li>
+                  <li>
+                    <a href="#">Freebies</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">JavaScript</a>
+                  </li>
+                  <li>
+                    <a href="#">CSS</a>
+                  </li>
+                  <li>
+                    <a href="#">Tutorials</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> {% endcomment %}
+
+        <!-- Side Widget -->
+      </div>
+ 
+    <!-- /.row -->
+  </div>
+
+  {% comment %}
+  <div class="container">
+    <h1 class="my-3">{{blogs.title}}</h1>
+    <hr />
+    <div class="mb-1 text-muted my-1">{{blogs.time}} by {{blogs.author}}</div>
+    <hr />
+    <div class="my-3">{{blogs.content|safe}}</div>
+  </div>
+  {% endcomment %} 
+</div>
+{% endblock body %}

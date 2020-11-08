@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block css %}
+<style>
+.container{
+    min-height: 83vh;
+}
+
+</style>
+
+{% endblock css %}
+
+{% block body %}
+
+<div class="container">
+<div class="my-3"><h2  style=" display: inline;">Search results for</h2><h1 style=" display: inline;"> {{que}} </h1></div>
+{% for blog in blogs %}
+<div
+    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative my-4"
+  >
+    <div class="col p-4 d-flex flex-column position-static">
+    <strong class="d-inline-block mb-2 text-primary">{{blog.relation}}</strong>
+      <h3 class="mb-0"><a href="/blogpost/{{blog.slugs}}" class="text-dark">{{blog.title}}</a></h3>
+      <div class="mb-1 text-muted my-1">{{blog.time}} by {{blog.author}}</div>
+      <p class="card-text mb-auto">
+        {{blog.Short_Description|slice:400|safe}}...
+      </p>
+      <a href="/blogpost/{{blog.slugs}}">
+<button  type="button" class="btn btn-outline-primary btn-sm my-2">Continue Reading</button></a>
+    </div>
+  </div>
+   {% endfor %} 
+</div>
+
+{% endblock body %}

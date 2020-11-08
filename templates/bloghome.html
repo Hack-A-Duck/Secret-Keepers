@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %} Secret-Keepers{% endblock title %}
+{% block blogactive %}active{% endblock blogactive %}
+
+{% block css %}
+<style>
+.container{
+    min-height: 83vh;
+}
+
+</style>
+
+{% endblock css %}
+{% block body %}
+
+
+<div class="container">
+<div class="my-3">
+<h1>Welcome to Secret Keepers Blog</h1>
+</div>
+{% for blog in blogs %}
+  <div
+    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+  >
+    <div class="col p-4 d-flex flex-column position-static">
+    <strong class="d-inline-block mb-2 text-primary">{{blog.relation}}</strong>
+      <h3 class="mb-0"><a href="/blogpost/{{blog.slugs}}" class="text-dark">{{blog.title}}</a></h3>
+     
+      <div class="mb-1 text-muted my-1">{{blog.time}} by {{blog.author}}</div>
+     
+      <p class="card-text mb-auto">
+        {{blog.Short_Description|safe}} 
+      </p>
+      <a href="/blogpost/{{blog.slugs}}">
+<button  type="button" class="btn btn-outline-primary btn-sm my-2">Continue Reading</button></a>
+    </div>
+  </div>
+
+  {% comment %} <div class="my-5">
+    <h3 class="text-dark my-2"><a href="/blogpost/{{blog.slugs}}" class="text-dark">{{blog.title}}</a></h3>
+   <div class="my-2">{{blog.content|slice:400|safe}}...</div>
+   <a href="/blogpost/{{blog.slugs}}">
+<button  type="button" class="btn btn-primary btn-sm">Read More...</button></a>
+</div> {% endcomment %}
+{% endfor %}
+<div class="my-4">
+{% if prev %}
+<a href="/blog?page={{prev}} ">
+<button  class="btn btn-primary btn-sm ">&laquo; Previous</button>
+ </a>
+ {% else %}
+ <a href="/blog?page=1">
+<button  class="btn btn-primary  btn-sm " disabled>&laquo; Previous</button>
+ </a>
+{% endif %}
+
+ {% if nxt %}
+<a href="/blog?page={{nxt}} ">
+<button   class="btn btn-primary btn-sm float-right">Next &raquo;</button>
+ </a>
+ {% else %}
+ <a href="#">
+<button   class="btn btn-primary btn-sm float-right" disabled>Next &raquo;</button>
+ </a>
+{% endif %} 
+
+</div>
+</div>
+
+
+{% endblock body %}
