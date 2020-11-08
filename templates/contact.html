@@ -15,7 +15,7 @@
 
 <div class="row my-3 mx-auto">
     <div class="col-md-10 col-lg-8 mx-auto">
-        <p  style="font-size:1.3rem;">Want to get in touch? Fill out the form below to send me a message and I will 
+        <p  style="font-size:1.3rem;">Want to tell a secret? Fill out the form below to tell a secret and I will 
         get back to you as soon as possible!</p>
         <form action="/contact/" method="POST">
         {% csrf_token %}
@@ -29,10 +29,13 @@
                 <input type="email" class="form-control" name="email" required placeholder="Email Address" />
                 <small class="form-text text-danger help-block"></small></div>
             </div>
-            <div class="control-group">
-                <div class="form-group floating-label-form-group controls"><label>Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Phone Number" />
-                <small class="form-text text-danger help-block"></small></div>
+            <div class="control-group ">
+                <div class="form-group floating-label-form-group controls "><label>Phone Number</label>
+                <div class="input-group-prepend">
+    <span class=" input-group-prepend input-group-text " id="basic-addon1">+91</span><input type="pass" class="form-control" id="phone" name="phone" required placeholder="Phone Number" pattern="[0-9]{10}"/>
+                
+  </div>
+                </div>
             </div>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-3"><label>Message</label>
@@ -44,7 +47,7 @@
   <input type="file" class="custom-file-input" id="customFile">
   <label class="custom-file-label" for="customFile">Choose file</label>
 </div> {% endcomment %}
-            <div class="form-group"><button class="btn btn-primary my-3" id="sendMessageButton" type="submit">Send</button></div>
+            <div class="form-group"><button class="btn btn-primary my-3" id="sendMessageButton" type="submit">Share</button></div>
   </div>
         
         
@@ -54,5 +57,5 @@
 
 
 </div>
-
+form
 {% endblock body %}

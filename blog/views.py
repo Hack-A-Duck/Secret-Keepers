@@ -41,7 +41,7 @@ def contact(request):
         message = request.POST.get("message")
         instance = Contact(name=name, email = email, phone =phone, message = message)
         instance.save()
-
+        return render(request,'success.html')
     
     return render(request,'contact.html')
 

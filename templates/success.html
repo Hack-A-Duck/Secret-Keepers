@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block contactactive %}active{% endblock contactactive %}
+
+{% block css %}
+<style>
+.container{
+    min-height: 90vh;
+    padding-top : 8rem;
+}
+</style>
+
+{% endblock css %}
+
+{% block body %}
+{% comment %} <section class="jumbotron text-center"> {% endcomment %}
+    <div class="container text-center">
+      <h1>Thanks for sharing your secret</h1>
+      <p class="lead text-muted">
+      “And now here is your secret, a very simple secret<br>
+       It is only with the heart that one can see rightly; what is essential is invisible to the eye.”
+      </p>
+      <p>
+        <a href="/blog" class="btn btn-primary my-4 mx-3">Read secrets</a>
+        <a href="/contact" class="btn btn-secondary mx-3 my-4">Share more</a>
+      </p>
+    </div>
+  {% comment %} </section> {% endcomment %}
+
+{% endblock body %}
