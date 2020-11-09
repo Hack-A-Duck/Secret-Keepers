@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 's0p#g82%-^@*i3m3ik%@@y_pad4da@hrdp82=dtl30c9%lq)_s')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['secret-keepers.herokuapp.com']
+ALLOWED_HOSTS = ['secret-keepers.herokuapp.com','127.0.0.1']
 
 
 # Application definition
