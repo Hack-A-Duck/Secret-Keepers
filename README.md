@@ -1,5 +1,5 @@
-**Secret Keepers**<br />
-**Swapnil goyal, Manish kumar**<br />
+#**Secret Keepers**<br />
+##**Swapnil goyal, Manish kumar**<br />
 My friend Manish is fond of writing blogs but don't know to code<br />
 So I created a blog website for him where he can publish his work<br />
 and he can edit/delete/add blogs and can access contact info of others <br />
