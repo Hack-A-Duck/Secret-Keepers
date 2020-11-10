@@ -4,6 +4,6 @@ So i created a blog websie for him where he can publish his work
 and he can edit/delete/add blogs and he can access contact info 
 of others also
 If You want to see his work then go to 
-secret-keepers.herokuapp.com
+[Go to blog](secret-keepers.herokuapp.com)
 He can edit it by loging with his id/password on
-secret-keepers.herokuapp.com/admin/
+[Go to admin panel](#secret-keepers.herokuapp.com/admin/)
